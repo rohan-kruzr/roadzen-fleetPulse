@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>My First PHP Page</title>
+    <style>
+        html, body, iframe { margin: 0; padding: 0; height: 100%; width: 100%; }
+        iframe { border: none;}
+    </style>
+</head>
+<body onLoad="loadIframe()">
+    <iframe name="hello" id="myAbc" width="100%" height="100%"></iframe>
+    <script>
+        const iframe = document.getElementById("myAbc");
+        function loadIframe(){
+            iframe.src= "https://rohan-kruzr.github.io/roadzen-drivers/index.html"
+        };
+
+        iframe.onload = function() {
+            console.log("The iframe is loaded");
+        }
+        iframe.onerror = function() {
+            console.log("Something wrong happened");
+        }
+    </script>
+</html>
